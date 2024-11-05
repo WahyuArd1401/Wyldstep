@@ -1,0 +1,10 @@
+.discount-badge::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 1/2;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #FF6D6D; /* Sesuaikan dengan warna badge */
+}
