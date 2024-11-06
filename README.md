@@ -1,8 +1,25 @@
-# React + Vite
+# Wyldstep
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Deskripsi
 
-Currently, two official plugins are available:
+Wyldstep merupakan aplikasi eccomerce yang menjual alas kaki yang dibangun menggunakan framework Vite.js. Desain UI yang digunakan dalam aplikasi ini terinspirasi dari dribble [`Attractive UI`](https://dribbble.com/shots/17897500-Nike-Shoe-Store-Ecommerce-Landing-Page/attachments/13075214?mode=media).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Library yang digunakan
+
+- AOS
+- React-countup
+- Shadcn/UI
+
+## Instalasi
+- Clone project dari link repositori menggunakan <i>command</i> berikut.
+```yaml
+git clone https://github.com/WahyuArd1401/Wyldstep.git
+```
+- Masuk ke folder dan <i>install package</i> yang dibutuhkan.
+```yaml
+npm install
+```
+- Jalankan aplikasi.
+```yaml
+npm run dev
+```
