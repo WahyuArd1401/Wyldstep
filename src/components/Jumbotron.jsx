@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Autoplay from 'embla-carousel-autoplay';
+import CountUp from 'react-countup';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { Button } from './ui/button';
 import JumbotronCard from './JumbotronCard';
@@ -8,6 +11,48 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const Jumbotron = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
+  const CountContent = [
+    {
+      end: 20,
+      label: 'orders completed'
+    },
+    {
+      end: 10,
+      label: 'satisfied customers'
+    },
+    {
+      end: 5,
+      label: 'happy customers'
+    }
+  ]
+
+  const CountCard = ({ end, label }) => {
+    return (
+      <div 
+      className='flex justify-center items-center'
+      data-aos='fade-up'>
+        <CountUp
+          start={1}
+          end={end}
+          duration={3}
+          separator="."
+          enableScrollSpy={true}
+          scrollSpyOnce
+          className='text-custom-secondary text-3xl font-monument'
+        />
+        <p className='text-custom-secondary text-3xl mr-2 font-monument'>K+</p>
+        <p className='text-gray-500 font-medium capitalize'>{label}</p>
+      </div>
+    )
+  }
   return (
     <>
       <div className="w-full px-36 py-10 flex gap-8">
@@ -78,9 +123,11 @@ const Jumbotron = () => {
 
       <div className="w-full px-36 flex justify-center items-center">
         <div className="flex justify-between items-center w-full max-w-5xl gap-14 my-10">
-            <p className=""><span className='text-custom-secondary font-monument text-2xl'>20K+</span> orders completed</p> | 
-            <p className=""><span className='text-custom-secondary font-monument text-2xl'>20K+</span> orders completed</p> | 
-            <p className=""><span className='text-custom-secondary font-monument text-2xl'>20K+</span> orders completed</p>
+          {CountContent.map((item, index) => {
+            return (
+              <CountCard key={index} {...item} />
+            )
+          })}
         </div>
       </div>
     </>
