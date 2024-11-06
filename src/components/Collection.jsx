@@ -12,13 +12,13 @@ const Collection = () => {
       backgroundBlendMode: 'overlay'}}>
       <Subtitle>Our <span className='text-custom-secondary'>collection</span></Subtitle>
       <ul className="w-3/4 flex justify-between font-monument text-md mb-8">
-        <li className="hover:text-custom-primary">Boots</li>
-        <li className="hover:text-custom-primary">Shoes</li>
-        <li className="hover:text-custom-primary">Slips</li>
-        <li className="hover:text-custom-primary">Sandal</li>
-        <li className="hover:text-custom-primary">Sports Shoe</li>
+        <li className="hover:text-custom-primary hover:cursor-pointer">Boots</li>
+        <li className="hover:text-custom-primary hover:cursor-pointer">Shoes</li>
+        <li className="hover:text-custom-primary hover:cursor-pointer">Slips</li>
+        <li className="hover:text-custom-primary hover:cursor-pointer">Sandal</li>
+        <li className="hover:text-custom-primary hover:cursor-pointer">Sports Shoe</li>
       </ul>
-      <div className="w-3/4 grid grid-cols-3 gap-8 justify-between">
+      <div className="w-3/4 grid grid-cols-3 gap-8 justify-between hover:cursor-pointer">
         <CollectionCard />
         <CollectionCard />
         <CollectionCard />

@@ -1,5 +1,5 @@
-import { Avatar, AvatarImage } from '@radix-ui/react-avatar'
-import React from 'react'
+import { Avatar, AvatarImage } from '@radix-ui/react-avatar';
+import React from 'react';
 
 const FeedbackCard = () => {
   return (
@@ -9,16 +9,19 @@ const FeedbackCard = () => {
           <AvatarImage
             src="../images/avatar.jpg"
             alt="Shadcn avatar"
-            className='w-[50px] rounded-full' />
+            className='w-[50px] rounded-full'
+          />
         </Avatar>
         <div className='flex flex-col capitalize text-xs'>
           <p className='text-custom-primary font-monument'>Wahyu Ardian</p>
           <p className='text-gray-500 font-medium'>Designer</p>
         </div>
       </div>
-      <p  className='text-sm font-medium text-gray-500 text-start'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa tempora voluptas dicta cum praesentium quam ullam, in, sequi maiores eos nulla quis totam quaerat ipsum atque est numquam ducimus. Doloribus?</p>
+      <p className='text-sm font-medium text-gray-500 text-start line-clamp-5'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa tempora voluptas dicta cum praesentium quam ullam, in, sequi maiores eos nulla quis totam quaerat ipsum atque est numquam ducimus. Doloribus?
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default FeedbackCard
+export default FeedbackCard;

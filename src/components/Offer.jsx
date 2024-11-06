@@ -1,25 +1,26 @@
 import OfferCard from './OfferCard'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHourglassHalf } from '@fortawesome/free-solid-svg-icons'
+import { faClock, faMoneyBill1 } from '@fortawesome/free-regular-svg-icons'
 import Subtitle from './Subtitle'
+import { faPeopleGroup, faPercent } from '@fortawesome/free-solid-svg-icons'
 
 const Offer = () => {
   const content = [
     {
-      icon: <FontAwesomeIcon icon={faHourglassHalf} />,
+      icon: faClock,
       title: "24/7 support",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
     }, {
-      icon: <FontAwesomeIcon icon={faHourglassHalf} />,
+      icon: faMoneyBill1,
       title: "cash back",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
     }, {
-      icon: <FontAwesomeIcon icon={faHourglassHalf} />,
+      icon: faPercent,
       title: "monthly offer",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
     }, {
-      icon: <FontAwesomeIcon icon={faHourglassHalf} />,
+      icon: faPeopleGroup,
       title: "membership",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
     },
@@ -30,7 +31,7 @@ const Offer = () => {
       <div className='w-3/4 flex justify-center gap-8'>
         {content.map((item, index) => {
           return (
-            <OfferCard key={index} title={item.title} description={item.description} />
+            <OfferCard key={index} icon={item.icon} title={item.title} description={item.description} />
           )
         })}
       </div>
